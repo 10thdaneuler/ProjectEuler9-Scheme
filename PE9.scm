@@ -1,0 +1,11 @@
+(define (euler9)
+  (define (iter a b)
+    (let ((c (sqrt (+ (* a a) (* b b)))))
+        (if (= (+ a b c) 1000)
+            (* a b c)
+            (if (> b 1000)
+                (iter (+ a 1) 1)
+                (iter a (+ b 1))))))
+  (iter 1 1))
+ 
+(euler9)
